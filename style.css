@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background-color: #f0f1f1;
+  position: relative;
+}
+
+#dark-mode {
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b99531;
+  cursor: pointer;
+  z-index: 99;
+}
+
+#dark-mode i {
+  font-size: 64px;
+}
+
+h1, h2, h3 {
+  font-family: "Fascinate Inline", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #3b594a;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #303131;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.conteiner {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: center;
+  background: #fff;
+  width: 80%;
+  margin: 60px auto;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgb(59, 89, 74, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 24px rgba(104, 186, 145, 0.5);
+}
+
+.card.sns {
+  padding: 20px auto;
+}
+.card.profile p {
+  margin: 0 auto 30px auto;
+  width: 60%;
+}
+
+.btn-link {
+  background: #3b594a;
+  color: #fff;
+  font-size: 16px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn-link:hover {
+  background: #628473;
+}
+
+.link {
+  display: inline-block;
+}
+
+.link a {
+  color: #3b594a;
+  font-size: 32px;
+}
+
+.link a i{
+  transition: 0.3s;
+}
+
+.link a:hover i{
+  color: #628473;
+}
+
+.img-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.card.profile img {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 960px) {
+  .card {
+    padding: 30px;
+    margin: 30px auto;
+    width: 100%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px
+  }
+  #dark-mode {
+    right: 1%;
+    top: 1%;
+  }
+}
+
+@media (max-width: 540px) {
+  .conteiner {
+    width: 80%;
+    margin: 30px auto;
+  }
+  .card {
+    padding: 32px 16px;
+    border-radius: 12px;
+    margin: 20px auto;
+  }
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px
+  }
+  p {
+    font-size: 14px;
+  }
+  .img-circle {
+    width: 150px;
+    height: 150px;
+  }
+  .card.profile p {
+    width: 100%;
+    margin: 0 auto 15px auto;
+  }
+}
+
+/* For DarkMode */

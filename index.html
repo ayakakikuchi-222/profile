@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Profile of Ayaka Kikuchi</title>
+</head>
+<body>
+  <div id="dark-mode">
+    <i class="fa-solid fa-moon dark-icon"></i>
+  </div>
+  <div class="conteiner">
+    <div class="card profile">
+      <h1>I'm Ayaka</h1>
+      <h2>programmer💻</h2>
+      <img src="./images/ayaka-profile.jpeg" alt="Picture-of-ayaka" class="img-circle">
+      <p>Former web designer with 4 years of experience designing and building websites in Japan. I'm now looking to transition into a more developer-focused role.</p>
+      <a href="https://github.com/ayakakikuchi-222" class="btn-link">My Github page</a>
+    </div>
+    <div class="card sns">
+      <h3>Follow me</h3>
+      <ul>
+        <li class="link">
+          <a href="https://github.com/ayakakikuchi-222" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        </li>
+        <li class="link">
+          <a href="" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const darkMode = document.getElementById('dark-mode');
+    const darkModeIcon = document.querySelector('.dark-icon');
+    darkMode.addEventListener('click', () => {
+      darkModeIcon.classList.toggle('fa-sun');
+    });
+  </script>
+</body>
+</html>
