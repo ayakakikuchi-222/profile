@@ -35,6 +35,11 @@ body {
   overflow-x: hidden;
 }
 
+html[lang="ja"] body {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+}
+
 body::before {
   content: "";
   position: fixed;
