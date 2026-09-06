@@ -23,6 +23,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 120%;
+  background: var(--paper);
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -865,6 +867,10 @@ html[lang="ja"] .contact-copy h3 {
     gap: 8px;
   }
 
+  .project-card__meta-top > span {
+    text-align: left;
+  }
+
   .hero-inner {
     width: min(100% - 56px, 760px);
   }
@@ -959,6 +965,10 @@ html[lang="ja"] .contact-copy h3 {
   .section-shell,
   .site-header {
     width: min(100% - 28px, 560px);
+  }
+
+  .hero {
+    height: 90vh;
   }
 
   .hero-inner {
