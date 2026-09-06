@@ -95,6 +95,10 @@ a {
   letter-spacing: 0.34em;
 }
 
+html[lang="en"] .brand {
+  font-family: "Alata", sans-serif;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -243,7 +247,7 @@ a {
 
 .scroll-note {
   position: absolute;
-  right: 0;
+  right: 36px;
   bottom: 56px;
   writing-mode: vertical-rl;
   font-size: 0.55rem;
@@ -258,6 +262,30 @@ a {
   height: 46px;
   margin: 10px auto 0;
   background: currentColor;
+  animation: scroll-line 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+  40% {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 1;
+  }
+  60% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
 }
 
 .work,
@@ -301,7 +329,7 @@ a {
 
 .project-grid {
   display: grid;
-  gap: 22px;
+  gap: 40px;
 }
 
 .project-grid--featured {
@@ -327,6 +355,12 @@ a {
   opacity: .7;
 }
 
+/* No link yet for these two — keep opacity unchanged on hover */
+a.project-visual--tossibly:hover,
+a.project-visual--kitly:hover {
+  opacity: 1;
+}
+
 .project-card__visual img {
   width: 100%;
   height: 100%;
@@ -343,7 +377,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(255,255,255,.48);
+  /* border: 1px solid rgba(255,255,255,.48); */
   pointer-events: none;
 }
 
@@ -479,7 +513,7 @@ a {
 
 .about-copy h3 {
   margin: 15px 0 30px;
-  font-size: clamp(2.1rem, 4vw, 3.6rem);
+  font-size: clamp(1.5rem, 2.9vw, 2.6rem);
   font-weight: 300;
   line-height: 1.25;
   letter-spacing: .05em;
@@ -492,6 +526,7 @@ a {
 }
 
 .about-art {
+  width: 90%;
   aspect-ratio: 1.45 / 1;
   position: relative;
   overflow: hidden;
@@ -520,7 +555,8 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 28px;
-  background: linear-gradient(145deg, rgba(255,255,255,.84), rgba(232,241,246,.7));
+  /* background: linear-gradient(145deg, rgba(255,255,255,.84), rgba(232,241,246,.7)); */
+  background: linear-gradient(145deg, rgba(255, 248, 243, 0.88), rgba(238, 244, 247, 0.72));
   border: 1px solid rgba(255,255,255,.7);
   box-shadow: var(--shadow);
 }
@@ -617,10 +653,15 @@ a {
 
 .contact-copy h3 {
   margin: 16px 0;
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(1.62rem, 3.24vw, 2.88rem);
   line-height: 1.2;
   font-weight: 300;
   letter-spacing: .05em;
+}
+
+html[lang="ja"] .contact-copy h3 {
+  font-size: clamp(1.3rem, 2.4vw, 2.1rem);
+  white-space: nowrap;
 }
 
 .contact-copy > p {
@@ -636,20 +677,44 @@ a {
 
 .contact-links a {
   display: grid;
-  grid-template-columns: 100px 1fr 24px;
+  grid-template-columns: 62px 1fr 24px;
   align-items: center;
   gap: 18px;
-  padding: 18px 0;
+  padding: 18px 16px;
+  margin: 0 -16px;
   border-bottom: 1px solid rgba(23,52,92,.15);
+  /* border-radius: 6px; */
+  transition: background-color .25s ease;
 }
 
 .contact-links a:first-child {
   border-top: 1px solid rgba(23,52,92,.15);
 }
 
-.contact-links span {
-  font-size: .72rem;
-  letter-spacing: .08em;
+.contact-links__icon {
+  width: 62px;
+  height: 62px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.contact-links__icon::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -9px;
+  background-image: url("images/blur-blue.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  mix-blend-mode: multiply;
 }
 
 .contact-links strong {
@@ -658,12 +723,22 @@ a {
   color: rgba(23,52,92,.7);
 }
 
-.contact-links i {
+.contact-links__arrow {
   font-style: normal;
   transition: transform .2s ease;
 }
 
+.contact-links a:hover {
+  background-color: rgba(244, 162, 97, 0.3);
+}
+
+/* .contact-links a:hover span,
+.contact-links a:hover strong,
 .contact-links a:hover i {
+  color: #fff;
+} */
+
+.contact-links a:hover .contact-links__arrow {
   transform: translateX(4px);
 }
 

@@ -9,16 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Alata&family=Noto+Sans+JP:wght@300;400;500&display=swap"
     rel="stylesheet"
   />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Ayaka Kikuchi home">AYAKA KIKUCHI</a>
+    <a class="brand" href="#top" aria-label="Ayaka Kikuchi home">Ayaka Kikuchi</a>
 
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
       <span></span>
@@ -42,7 +43,7 @@
       <div class="hero-inner">
         <div class="hero-copy reveal">
           <h1>Design <span>×</span> Code</h1>
-          <p class="hero-role">Web Designer &amp; Developer</p>
+          <p class="hero-role">Web Designer &amp; Fullstack Engineer</p>
           <p class="hero-lead">
             I create intuitive, thoughtful digital experiences.
           </p>
@@ -64,7 +65,7 @@
 
       <div class="project-grid project-grid--featured">
         <article class="project-card project-card--large reveal">
-          <a href="#" class="project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
+          <a class="project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
             <img src="images/tossibly-mockup.png" alt="Tossibly website mockup" />
           </a>
           <div class="project-card__meta">
@@ -83,7 +84,7 @@
         </article>
 
         <article class="project-card project-card--large reveal">
-          <a href="#" class="project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
+          <a class="project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
             <img src="images/kitly-mockup.png" alt="Kitly website mockup" />
           </a>
           <div class="project-card__meta">
@@ -108,7 +109,7 @@
         <div class="section-heading__title">
           <span>02</span>
           <i></i>
-          <h2>Selected Works</h2>
+          <h2>Works</h2>
         </div>
       </div>
 
@@ -123,25 +124,6 @@
               <span>Jun 2025</span>
             </div>
             <p class="project-card__desc">Redesigned the corporate website for Japan’s leading manufacturer of firefighting ladders, based in Saitama.</p>
-            <ul class="tech-tags">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>WordPress</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <a href="https://www.sdu.co.jp/" class="project-card__visual project-visual project-visual--web02" aria-label="Suzuki Clinic project">
-            <img src="images/suzuki_mock.png" alt="Suzuki Clinic website mockup" />
-          </a>
-          <div class="project-card__meta">
-            <div class="project-card__meta-top">
-              <h3>Suzuki Clinic</h3>
-              <span>Aug 2025</span>
-            </div>
-            <p class="project-card__desc">Redesigned the website for a local clinic in Utsunomiya, Tochigi, with a clear and approachable experience for patients.</p>
             <ul class="tech-tags">
               <li>HTML</li>
               <li>CSS</li>
@@ -169,6 +151,25 @@
             </ul>
           </div>
         </article>
+
+        <article class="project-card reveal">
+          <a href="https://www.sdu.co.jp/" class="project-card__visual project-visual project-visual--web02" aria-label="Suzuki Clinic project">
+            <img src="images/suzuki_mock.png" alt="Suzuki Clinic website mockup" />
+          </a>
+          <div class="project-card__meta">
+            <div class="project-card__meta-top">
+              <h3>Suzuki Clinic</h3>
+              <span>Aug 2025</span>
+            </div>
+            <p class="project-card__desc">Redesigned the website for a local clinic in Utsunomiya, Tochigi, with a clear and approachable experience for patients.</p>
+            <ul class="tech-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>WordPress</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -183,15 +184,13 @@
 
       <div class="about-grid">
         <div class="about-copy reveal">
-          <p class="about-kicker">DESIGNER → DEVELOPER</p>
+          <p class="about-kicker">DESIGNER → FULLSTACK ENGINEER</p>
           <h3>Thoughtful design,<br />made real with code.</h3>
           <p>
-            I'm a web designer and developer based in Japan. After working in web design,
-            I expanded into software development to build the experiences I design more directly.
+            I'm a full-stack engineer based in Japan. After working in web design, I expanded into software development so I could bring the experiences I design to life more directly.
           </p>
           <p>
-            I enjoy working at the intersection of design and implementation — shaping clear,
-            intuitive interfaces and translating them into practical, responsive products.
+            I approach product development from both design and implementation perspectives, with a focus on creating clear and intuitive interfaces.
           </p>
         </div>
 
@@ -212,35 +211,35 @@
 
       <div class="skill-grid">
         <article class="skill-card reveal">
-          <span class="skill-card__icon">✦</span>
-          <div>
-            <h3>Design</h3>
-            <p>Figma</p>
-            <p>Photoshop</p>
-            <p>Illustrator</p>
-            <p>UI / Web Design</p>
-          </div>
-        </article>
-
-        <article class="skill-card reveal">
-          <span class="skill-card__icon">&lt;/&gt;</span>
-          <div>
-            <h3>Front-end</h3>
-            <p>HTML</p>
-            <p>CSS / SCSS</p>
-            <p>JavaScript</p>
-            <p>Responsive Design</p>
-          </div>
-        </article>
-
-        <article class="skill-card reveal">
-          <span class="skill-card__icon">◫</span>
+          <span class="skill-card__icon"><i class="fa-solid fa-code"></i></span>
           <div>
             <h3>Development</h3>
             <p>Ruby on Rails</p>
             <p>PostgreSQL</p>
             <p>Git / GitHub</p>
             <p>AI-assisted Development</p>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-card__icon"><i class="fa-solid fa-display"></i></span>
+          <div>
+            <h3>Front-end</h3>
+            <p>HTML</p>
+            <p>CSS / SCSS</p>
+            <p>JavaScript</p>
+            <p>Wordpress</p>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-card__icon"><i class="fa-solid fa-palette"></i></span>
+          <div>
+            <h3>Design</h3>
+            <p>Figma</p>
+            <p>Illustrator</p>
+            <p>Photoshop</p>
+            <p>UI / Web Design</p>
           </div>
         </article>
       </div>
@@ -314,20 +313,20 @@
               <h2>Contact</h2>
             </div>
           </div>
-          <h3>Let’s make<br />something thoughtful.</h3>
-          <p>Feel free to reach out for work opportunities, collaborations, or just to say hello.</p>
+          <h3>Let’s build something together.</h3>
+          <p>If you have an opportunity or would like to work together, feel free to get in touch.</p>
         </div>
 
         <div class="contact-links reveal">
           <a href="https://www.linkedin.com/in/ayaka-k-581507240/" target="_blank" rel="noreferrer">
-            <span>LinkedIn</span>
+            <span class="contact-links__icon"><i class="fa-brands fa-linkedin-in"></i></span>
             <strong>linkedin.com/in/ayaka-k-581507240</strong>
-            <i>→</i>
+            <i class="contact-links__arrow fa-solid fa-chevron-right"></i>
           </a>
           <a href="https://github.com/ayakakikuchi-222" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
+            <span class="contact-links__icon"><i class="fa-brands fa-github"></i></span>
             <strong>github.com/ayakakikuchi-222</strong>
-            <i>→</i>
+            <i class="contact-links__arrow fa-solid fa-chevron-right"></i>
           </a>
         </div>
       </div>

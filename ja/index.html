@@ -13,12 +13,13 @@
     rel="stylesheet"
   />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="../style.css" />
   <script src="../script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Ayaka Kikuchi home">AYAKA KIKUCHI</a>
+    <a class="brand" href="#top" aria-label="Ayaka Kikuchi home">Ayaka Kikuchi</a>
 
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
       <span></span>
@@ -42,10 +43,9 @@
       <div class="hero-inner">
         <div class="hero-copy reveal">
           <h1>Design <span>×</span> Code</h1>
-          <p class="hero-role">Webデザイナー & デベロッパー</p>
+          <p class="hero-role">Webデザイナー & フルスタックエンジニア</p>
           <p class="hero-lead">
-            直感的なデジタル体験をデザインし、<br />
-            コードで形にしています。
+            アイデアを、デザインとコードで形に
           </p>
           <a class="button button--primary" href="#work">実績を見る <span>→</span></a>
         </div>
@@ -59,13 +59,13 @@
         <div class="section-heading__title">
           <span>01</span>
           <i></i>
-          <h2>主な実績</h2>
+          <h2>プロジェクト</h2>
         </div>
       </div>
 
       <div class="project-grid project-grid--featured">
         <article class="project-card project-card--large reveal">
-          <a href="#" class="project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
+          <a class="project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
             <img src="../images/tossibly-mockup.png" alt="Tossibly ウェブサイトのモックアップ" />
           </a>
           <div class="project-card__meta">
@@ -84,7 +84,7 @@
         </article>
 
         <article class="project-card project-card--large reveal">
-          <a href="#" class="project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
+          <a class="project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
             <img src="../images/kitly-mockup.png" alt="Kitly ウェブサイトのモックアップ" />
           </a>
           <div class="project-card__meta">
@@ -109,7 +109,7 @@
         <div class="section-heading__title">
           <span>02</span>
           <i></i>
-          <h2>セレクトワークス</h2>
+          <h2>主な実績</h2>
         </div>
       </div>
 
@@ -123,26 +123,7 @@
               <h3>関東梯子株式会社</h3>
               <span>2025年6月</span>
             </div>
-            <p class="project-card__desc">はしごメーカーのコーポレートサイト。構成を整理し、情報を探しやすくリニューアル。</p>
-            <ul class="tech-tags">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>WordPress</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <a href="#" class="project-card__visual project-visual project-visual--web02" aria-label="鈴木クリニック project">
-            <img src="../images/suzuki_mock.png" alt="鈴木クリニック ウェブサイトのモックアップ" />
-          </a>
-          <div class="project-card__meta">
-            <div class="project-card__meta-top">
-              <h3>鈴木クリニック</h3>
-              <span>2025年8月</span>
-            </div>
-            <p class="project-card__desc">地域のクリニック向けサイト。落ち着いた雰囲気で、診療情報を見つけやすく設計。</p>
+            <p class="project-card__desc">はしごメーカーのコーポレートサイト。構成を整理し、顧客のニーズに合わせてリニューアルしました。</p>
             <ul class="tech-tags">
               <li>HTML</li>
               <li>CSS</li>
@@ -161,7 +142,26 @@
               <h3>株式会社アイディ</h3>
               <span>2025年4月 · チーム開発</span>
             </div>
-            <p class="project-card__desc">ブランディングや映像・Web制作を手がけるクリエイティブ会社のサイト。</p>
+            <p class="project-card__desc">グラフィックデザイン・映像・Web制作を手がける広告制作会社のサイト。サイト全体の制作に関わりましたが、ここでは特にイラスト制作に注力しました。</p>
+            <ul class="tech-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>WordPress</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <a href="#" class="project-card__visual project-visual project-visual--web02" aria-label="鈴木クリニック project">
+            <img src="../images/suzuki_mock.png" alt="鈴木クリニック ウェブサイトのモックアップ" />
+          </a>
+          <div class="project-card__meta">
+            <div class="project-card__meta-top">
+              <h3>鈴木クリニック</h3>
+              <span>2025年8月</span>
+            </div>
+            <p class="project-card__desc">栃木県宇都宮市のクリニックのサイト。落ち着いた雰囲気で、患者様が診療情報を見つけやすいよう設計しました。</p>
             <ul class="tech-tags">
               <li>HTML</li>
               <li>CSS</li>
@@ -184,15 +184,14 @@
 
       <div class="about-grid">
         <div class="about-copy reveal">
-          <p class="about-kicker">デザイナー → デベロッパー</p>
-          <h3>想いのこもったデザインを、<br />コードで形に。</h3>
+          <p class="about-kicker">デザイナー → フルスタックエンジニア</p>
+          <h3>想いのこもった<br />デザインを、<br />コードで形に。</h3>
           <p>
-            日本を拠点に活動するWebデザイナー / デベロッパーです。Webデザインの仕事を経て、
-            自分がデザインした体験をより直接的に形にするため、ソフトウェア開発の領域にも活動を広げました。
+            日本を拠点に活動するフルスタックエンジニアです。<br>
+            Webデザインの仕事を経て、自分がデザインした体験をより直接的に形にするため、ソフトウェア開発にも領域を広げました。
           </p>
           <p>
-            デザインと実装の交差点で働くことが好きで、分かりやすく直感的なインターフェースを設計し、
-            実用的でレスポンシブなプロダクトへと落とし込んでいます。
+            デザインと実装の両面からプロダクトを整理し、分かりやすく直感的なインターフェースを設計するよう心がけています。
           </p>
         </div>
 
@@ -213,18 +212,18 @@
 
       <div class="skill-grid">
         <article class="skill-card reveal">
-          <span class="skill-card__icon">✦</span>
+          <span class="skill-card__icon"><i class="fa-solid fa-code"></i></span>
           <div>
-            <h3>デザイン</h3>
-            <p>Figma</p>
-            <p>Photoshop</p>
-            <p>Illustrator</p>
-            <p>UI / Webデザイン</p>
+            <h3>開発</h3>
+            <p>Ruby on Rails</p>
+            <p>PostgreSQL</p>
+            <p>Git / GitHub</p>
+            <p>AIを活用した開発</p>
           </div>
         </article>
 
         <article class="skill-card reveal">
-          <span class="skill-card__icon">&lt;/&gt;</span>
+          <span class="skill-card__icon"><i class="fa-solid fa-display"></i></span>
           <div>
             <h3>フロントエンド</h3>
             <p>HTML</p>
@@ -235,13 +234,13 @@
         </article>
 
         <article class="skill-card reveal">
-          <span class="skill-card__icon">◫</span>
+          <span class="skill-card__icon"><i class="fa-solid fa-palette"></i></span>
           <div>
-            <h3>開発</h3>
-            <p>Ruby on Rails</p>
-            <p>PostgreSQL</p>
-            <p>Git / GitHub</p>
-            <p>AIを活用した開発</p>
+            <h3>デザイン</h3>
+            <p>Figma</p>
+            <p>Photoshop</p>
+            <p>Illustrator</p>
+            <p>UI / Webデザイン</p>
           </div>
         </article>
       </div>
@@ -315,20 +314,20 @@
               <h2>お問い合わせ</h2>
             </div>
           </div>
-          <h3>一緒に、<br />想いのこもったものを。</h3>
-          <p>お仕事のご相談やコラボレーション、ちょっとした挨拶でもお気軽にご連絡ください。</p>
+          <h3>一緒に、<br />アイデアをかたちに。</h3>
+          <p>お仕事の機会やご相談がありましたら、お気軽にご連絡ください。</p>
         </div>
 
         <div class="contact-links reveal">
           <a href="https://www.linkedin.com/in/ayaka-k-581507240/" target="_blank" rel="noreferrer">
-            <span>LinkedIn</span>
+            <span class="contact-links__icon"><i class="fa-brands fa-linkedin-in"></i></span>
             <strong>linkedin.com/in/ayaka-k-581507240</strong>
-            <i>→</i>
+            <i class="contact-links__arrow fa-solid fa-chevron-right"></i>
           </a>
           <a href="https://github.com/ayakakikuchi-222" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
+            <span class="contact-links__icon"><i class="fa-brands fa-github"></i></span>
             <strong>github.com/ayakakikuchi-222</strong>
-            <i>→</i>
+            <i class="contact-links__arrow fa-solid fa-chevron-right"></i>
           </a>
         </div>
       </div>
