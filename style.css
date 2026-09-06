@@ -77,13 +77,20 @@ a {
   left: 0;
   right: 0;
   z-index: 50;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(251, 250, 247, 0);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   transition: background .4s ease, backdrop-filter .4s ease, -webkit-backdrop-filter .4s ease;
 }
 
-.site-header.is-scrolled {
+.site-header.is-scrolled::before {
   background: rgba(251, 250, 247, 0.68);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -147,14 +154,36 @@ html[lang="en"] .brand {
   border: 0;
   background: transparent;
   padding: 8px;
+  position: relative;
+  width: 38px;
+  height: 38px;
 }
 
 .menu-toggle span {
+  position: absolute;
+  left: 8px;
   width: 22px;
   height: 1px;
   background: var(--ink);
-  display: block;
-  margin: 5px 0;
+  transition: transform .25s ease, top .25s ease;
+}
+
+.menu-toggle span:first-child {
+  top: 14px;
+}
+
+.menu-toggle span:last-child {
+  top: 23px;
+}
+
+.menu-toggle.is-active span:first-child {
+  top: 18px;
+  transform: rotate(45deg);
+}
+
+.menu-toggle.is-active span:last-child {
+  top: 18px;
+  transform: rotate(-45deg);
 }
 
 .hero {
@@ -772,12 +801,17 @@ html[lang="ja"] .contact-copy h3 {
   .site-nav {
     position: fixed;
     inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 55;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 28px;
-    background: rgba(251,250,247,.96);
+    background: rgba(255, 255, 255, .85);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     opacity: 0;
     visibility: hidden;
     transition: opacity .25s ease, visibility .25s ease;
@@ -789,12 +823,46 @@ html[lang="ja"] .contact-copy h3 {
   }
 
   .site-nav a {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    padding: 4px 24px;
+    text-align: center;
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 0;
+    height: 75vh;
     background-image: url("images/hero-bg-mobile.png");
+  }
+
+  #work {
+    padding-top: 0;
+  }
+
+  #work .section-heading,
+  #work .project-grid--featured,
+  #selected-works .section-heading,
+  #selected-works .project-grid--small,
+  #about .section-heading,
+  #about .about-grid,
+  #skills .section-heading,
+  #skills .skill-grid,
+  .experience .section-heading,
+  .experience .experience-list {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .section-heading {
+    margin-bottom: 22px;
+  }
+
+  #selected-works .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .project-card__meta-top {
+    flex-direction: column;
+    gap: 8px;
   }
 
   .hero-inner {
@@ -839,9 +907,51 @@ html[lang="ja"] .contact-copy h3 {
     padding-bottom: 80px;
   }
 
+  .contact-copy,
+  .contact-links {
+    width: 90%;
+    margin-inline: auto;
+  }
+
   .contact-links {
     border-left: 0;
     padding-left: 0;
+  }
+
+  .reveal.is-visible {
+    margin: 0 auto;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+
+  .experience {
+    padding-bottom: 0;
+  }
+}
+
+/* Tablet only — between the mobile breakpoint above and the phone-specific one below */
+@media (min-width: 621px) and (max-width: 900px) {
+  .project-grid--featured,
+  .project-grid--small {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-art {
+    width: 70%;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-list {
+    border-top: 0;
+  }
+
+  .contact-links a:first-child {
+    border-top: 0;
   }
 }
 
@@ -903,9 +1013,17 @@ html[lang="ja"] .contact-copy h3 {
     gap: 10px;
   }
 
+  .experience-list {
+    border-top: 0;
+  }
+
   .contact-links a {
     grid-template-columns: 72px 1fr 18px;
     gap: 10px;
+  }
+
+  .contact-links a:first-child {
+    border-top: 0;
   }
 
   .contact-links strong {
