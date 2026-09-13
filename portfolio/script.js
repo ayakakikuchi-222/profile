@@ -47,9 +47,14 @@ if (header) {
 }
 
 // Project/Work image galleries (Swiper, loaded via CDN — see index.html <head>).
-// Each ".project-gallery" card gets its own independent main+thumbs Swiper pair,
-// so interacting with one card's thumbnails never affects any other card.
+// Each ".project-gallery" card gets its own independent main+thumbs Swiper pair
+// (its thumbnails only ever drive its own main image, never another card's),
+// but the autoplay "tick" is shared across all of them via a single interval
+// below, so every gallery advances to its next slide at the same moment
+// instead of drifting apart over time.
 if (typeof Swiper !== 'undefined') {
+  const mainSwipers = [];
+
   document.querySelectorAll('.project-gallery').forEach((gallery) => {
     const mainEl = gallery.querySelector('.project-gallery__main');
     const thumbsEl = gallery.querySelector('.project-gallery__thumbs');
@@ -62,15 +67,18 @@ if (typeof Swiper !== 'undefined') {
       watchSlidesProgress: true,
     });
 
-    new Swiper(mainEl, {
+    const mainSwiper = new Swiper(mainEl, {
       rewind: true,
-      speed: 500,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
+      speed: 800,
       thumbs: { swiper: thumbsSwiper },
     });
+
+    mainSwipers.push(mainSwiper);
   });
+
+  if (mainSwipers.length) {
+    setInterval(() => {
+      mainSwipers.forEach((swiper) => swiper.slideNext());
+    }, 4000);
+  }
 }
