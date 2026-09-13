@@ -434,6 +434,12 @@ html[lang="en"] .brand {
   gap: 20px;
 }
 
+.project-card__tenure {
+  margin: 2px 0 0;
+  font-size: .68rem;
+  color: var(--ink-soft);
+}
+
 .project-card__meta-top h3 {
   flex: 1;
   min-width: 0;
@@ -449,6 +455,13 @@ html[lang="en"] .brand {
   margin: 6px 0 0;
   font-size: .76rem;
   line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.project-card__role {
+  margin: 6px 0 0;
+  font-size: .74rem;
+  font-weight: 500;
   color: var(--ink-soft);
 }
 
@@ -674,6 +687,41 @@ html[lang="en"] .brand {
   margin: 5px 0 0;
   font-size: .84rem;
   color: var(--ink-soft);
+}
+
+.site-footer {
+  min-height: 240px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("images/footer-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 25vh;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, var(--paper), transparent);
+}
+
+.site-footer p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: .05em;
+  color: var(--ink);
 }
 
 .contact {
@@ -908,7 +956,8 @@ html[lang="ja"] .contact-copy h3 {
     display: none;
   }
 
-  .contact {
+  .contact,
+  .site-footer {
     background-image: url("images/footer-mobile.png");
   }
 
