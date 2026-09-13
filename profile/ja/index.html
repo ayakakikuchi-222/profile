@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ayaka Kikuchi — Webデザイナー / デベロッパーのポートフォリオ。" />
+  <title>Ayaka Kikuchi | Design × Code</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ayaka Kikuchi home">Ayaka Kikuchi</a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#work">実績</a>
+      <a href="#about">プロフィール</a>
+      <a href="#skills">スキル</a>
+      <a href="#contact">お問い合わせ</a>
+      <div class="lang-switch" aria-label="Language">
+        <a href="../index.html" class="lang-switch__link">EN</a>
+        <a href="index.html" class="lang-switch__link is-active">JA</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <h1>Design <span>×</span> Code</h1>
+          <p class="hero-role">Webデザイナー & フルスタックエンジニア</p>
+          <p class="hero-lead">
+            アイデアを、デザインとコードで形に
+          </p>
+          <a class="button button--primary" href="#work">実績を見る <span>→</span></a>
+        </div>
+      </div>
+
+      <span class="scroll-note">SCROLL</span>
+    </section>
+
+    <section class="work section-shell" id="work">
+      <div class="section-heading reveal">
+        <div class="section-heading__title">
+          <span>01</span>
+          <i></i>
+          <h2>プロジェクト</h2>
+        </div>
+      </div>
+
+      <div class="project-grid project-grid--featured">
+        <article class="project-card project-card--large reveal">
+          <a href="https://github.com/ayakakikuchi-222/tossibly" rel="noreferrer" class="project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
+            <img src="../images/tossibly-mockup.png" alt="Tossibly ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon github"><i class="fa-brands fa-github"></i></span>
+          </a>
+          <div class="project-card__meta">
+            <div class="project-card__meta-top">
+              <h3>Tossibly</h3>
+              <span>2026年8月 · 2週間 · チーム開発</span>
+            </div>
+            <p class="project-card__desc">いらない物の写真を撮ってAIが再利用できるかどうか判別し、それぞれにあった最適な選択をユーザーに案内するアプリです。</p>
+            <ul class="tech-tags">
+              <li>Ruby on Rails</li>
+              <li>JavaScript</li>
+              <li>OpenAI API</li>
+              <li>PostgreSQL</li>
+              <li>Chrome Extension</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card project-card--large reveal">
+          <a href="https://github.com/ayakakikuchi-222/kitly" rel="noreferrer" class="project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
+            <img src="../images/kitly-mockup.png" alt="Kitly ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon github"><i class="fa-brands fa-github"></i></span>
+          </a>
+          <div class="project-card__meta">
+            <div class="project-card__meta-top">
+              <h3>Kitly</h3>
+              <span>2026年8月 · 1週間 · チーム開発</span>
+            </div>
+            <p class="project-card__desc">デザイナーや開発者がテーマを簡単に入力し、それに合わせてUIコンポーネントを速やかに作成してくれるUIツールです。</p>
+            <ul class="tech-tags">
+              <li>Ruby on Rails</li>
+              <li>JavaScript</li>
+              <li>OpenAI API</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="work section-shell" id="selected-works">
+      <div class="section-heading reveal">
+        <div class="section-heading__title">
+          <span>02</span>
+          <i></i>
+          <h2>主な実績</h2>
+        </div>
+      </div>
+
+      <div class="project-grid project-grid--small">
+        <article class="project-card reveal">
+          <a href="https://www.845.co.jp/" class="project-card__visual project-visual project-visual--web01" aria-label="関東梯子株式会社 project">
+            <img src="../images/kanto845_mock.png" alt="関東梯子株式会社 ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="project-card__meta">
+            <div class="project-card__meta-top">
+              <h3>関東梯子株式会社</h3>
+              <span>2025年6月</span>
+            </div>
+            <p class="project-card__desc">はしごメーカーのコーポレートサイト。構成を整理し、顧客のニーズに合わせてサイトをリニューアルしました。</p>
+            <ul class="tech-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>WordPress</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <a href="https://www.aid-design.jp/" class="project-card__visual project-visual project-visual--web03" aria-label="株式会社アイディ project">
+            <img src="../images/aid-mockup.png" alt="株式会社アイディ ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="project-card__meta">
+            <div class="project-card__meta-top">
+              <h3>株式会社アイディ</h3>
+              <span>2025年4月 · チーム開発</span>
+            </div>
+            <p class="project-card__desc">グラフィックデザイン・映像・Web制作を手がける広告制作会社のサイト。サイト全体の制作に関わりましたが、ここでは特にイラスト制作に注力しました。</p>
+            <ul class="tech-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>WordPress</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <a href="https://www.sdu.co.jp/" class="project-card__visual project-visual project-visual--web02" aria-label="鈴木クリニック project">
+            <img src="../images/suzuki_mock.png" alt="鈴木クリニック ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <div class="project-card__meta">
+            <div class="project-card__meta-top">
+              <h3>鈴木クリニック</h3>
+              <span>2025年8月</span>
+            </div>
+            <p class="project-card__desc">栃木県宇都宮市のクリニックのサイト。落ち着いた雰囲気で、患者様が診療情報を見つけやすいよう設計しました。</p>
+            <ul class="tech-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>WordPress</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <div class="section-heading reveal">
+        <div class="section-heading__title">
+          <span>03</span>
+          <i></i>
+          <h2>プロフィール</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="about-kicker">デザイナー → フルスタックエンジニア</p>
+          <h3>想いのこもった<br />デザインを、<br />コードで形に。</h3>
+          <p>
+            日本を拠点に活動するフルスタックエンジニアです。<br>
+            Webデザインの仕事を経て、自分がデザインした体験をより直接的に形にするため、ソフトウェア開発にも領域を広げました。
+          </p>
+          <p>
+            デザインと実装の両面からプロダクトを整理し、分かりやすく直感的なインターフェースを設計するよう心がけています。
+          </p>
+        </div>
+
+        <div class="about-art reveal">
+          <img src="../images/me-illustration.png" alt="菊地彩のイラスト" />
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section-shell" id="skills">
+      <div class="section-heading reveal">
+        <div class="section-heading__title">
+          <span>04</span>
+          <i></i>
+          <h2>スキル</h2>
+        </div>
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill-card reveal">
+          <div class="skill-card__header">
+            <span class="skill-card__icon"><i class="fa-solid fa-server"></i></span>
+            <h3>バックエンド</h3>
+          </div>
+          <div class="skill-card__content">
+            <p>Ruby on Rails</p>
+            <p>PostgreSQL</p>
+            <p>AI / LLM連携</p>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-card__header">
+            <span class="skill-card__icon"><i class="fa-solid fa-display"></i></span>
+            <h3>フロントエンド</h3>
+          </div>
+          <div class="skill-card__content">
+            <p>HTML</p>
+            <p>CSS / SCSS</p>
+            <p>JavaScript</p>
+            <p>Bootstrap</p>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-card__header">
+            <span class="skill-card__icon"><i class="fa-solid fa-palette"></i></span>
+            <h3>デザイン</h3>
+          </div>
+          <div class="skill-card__content">
+            <p>Figma</p>
+            <p>Illustrator</p>
+            <p>Photoshop</p>
+            <p>UI / Webデザイン</p>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-card__header">
+            <span class="skill-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <h3>ツール &amp; <br>ワークフロー</h3>
+          </div>
+          <div class="skill-card__content">
+            <p>Git / GitHub</p>
+            <p>ターミナル</p>
+            <p>Heroku</p>
+            <p>Cloudinary</p>
+            <p>Claude Code</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience section-shell">
+      <div class="section-heading reveal">
+        <div class="section-heading__title">
+          <span>05</span>
+          <i></i>
+          <h2>経歴</h2>
+        </div>
+      </div>
+
+      <div class="experience-list reveal">
+        <div class="experience-row">
+          <span>2023 – 2025</span>
+          <div>
+            <h3>Webデザイナー / フロントエンドエンジニア</h3>
+            <p class="experience-row__company">株式会社アイディ</p>
+            <p>様々なクライアントのコーポレートサイトを、企画からフロントエンド実装まで担当。</p>
+          </div>
+        </div>
+        <div class="experience-row">
+          <span>2021 – 2023</span>
+          <div>
+            <h3>グラフィックデザイナー</h3>
+            <p class="experience-row__company">株式会社アイディ</p>
+            <p>ブランディングや販促物、マーケティング資料などのビジュアル・印刷物デザインを制作。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    <section class="experience section-shell">
+      <div class="section-heading reveal">
+        <div class="section-heading__title">
+          <span>06</span>
+          <i></i>
+          <h2>学歴</h2>
+        </div>
+      </div>
+
+      <div class="experience-list reveal">
+        <div class="experience-row">
+          <span>2026</span>
+          <div>
+            <h3>Le Wagon Tokyo</h3>
+            <p>AIソフトウェア開発ブートキャンプ</p>
+          </div>
+        </div>
+        <div class="experience-row">
+          <span>2013 – 2017</span>
+          <div>
+            <h3>神田外語大学</h3>
+            <p>英米語学科 卒業(学士)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <section class="contact" id="contact">
+      <div class="section-shell contact-inner">
+        <div class="contact-copy reveal">
+          <div class="section-heading section-heading--light">
+            <div class="section-heading__title">
+              <span>06</span>
+              <i></i>
+              <h2>お問い合わせ</h2>
+            </div>
+          </div>
+          <h3>一緒に、<br />アイデアをかたちに。</h3>
+          <p>お仕事の機会やご相談がありましたら、お気軽にご連絡ください。</p>
+        </div>
+
+        <div class="contact-links reveal">
+          <a href="https://www.linkedin.com/in/ayaka-kikuchi/" target="_blank" rel="noreferrer">
+            <span class="contact-links__icon"><i class="fa-brands fa-linkedin-in"></i></span>
+            <strong>linkedin.com/in/ayaka-kikuchi/</strong>
+            <i class="contact-links__arrow fa-solid fa-chevron-right"></i>
+          </a>
+          <a href="https://github.com/ayakakikuchi-222" target="_blank" rel="noreferrer">
+            <span class="contact-links__icon"><i class="fa-brands fa-github"></i></span>
+            <strong>github.com/ayakakikuchi-222</strong>
+            <i class="contact-links__arrow fa-solid fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
