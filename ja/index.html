@@ -65,8 +65,9 @@
 
       <div class="project-grid project-grid--featured">
         <article class="project-card project-card--large reveal">
-          <a class="project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
+          <a href="https://github.com/ayakakikuchi-222/tossibly" rel="noreferrer" class="project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
             <img src="../images/tossibly-mockup.png" alt="Tossibly ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon github"><i class="fa-brands fa-github"></i></span>
           </a>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -77,15 +78,17 @@
             <ul class="tech-tags">
               <li>Ruby on Rails</li>
               <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
+              <li>OpenAI API</li>
+              <li>PostgreSQL</li>
+              <li>Chrome Extension</li>
             </ul>
           </div>
         </article>
 
         <article class="project-card project-card--large reveal">
-          <a class="project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
+          <a href="https://github.com/ayakakikuchi-222/kitly" rel="noreferrer" class="project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
             <img src="../images/kitly-mockup.png" alt="Kitly ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon github"><i class="fa-brands fa-github"></i></span>
           </a>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -96,8 +99,8 @@
             <ul class="tech-tags">
               <li>Ruby on Rails</li>
               <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
+              <li>OpenAI API</li>
+              <li>PostgreSQL</li>
             </ul>
           </div>
         </article>
@@ -117,6 +120,7 @@
         <article class="project-card reveal">
           <a href="https://www.845.co.jp/" class="project-card__visual project-visual project-visual--web01" aria-label="関東梯子株式会社 project">
             <img src="../images/kanto845_mock.png" alt="関東梯子株式会社 ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </a>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -129,6 +133,7 @@
               <li>CSS</li>
               <li>JavaScript</li>
               <li>WordPress</li>
+              <li>PHP</li>
             </ul>
           </div>
         </article>
@@ -136,6 +141,7 @@
         <article class="project-card reveal">
           <a href="https://www.aid-design.jp/" class="project-card__visual project-visual project-visual--web03" aria-label="株式会社アイディ project">
             <img src="../images/aid-mockup.png" alt="株式会社アイディ ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </a>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -148,6 +154,7 @@
               <li>CSS</li>
               <li>JavaScript</li>
               <li>WordPress</li>
+              <li>PHP</li>
             </ul>
           </div>
         </article>
@@ -155,6 +162,7 @@
         <article class="project-card reveal">
           <a href="https://www.sdu.co.jp/" class="project-card__visual project-visual project-visual--web02" aria-label="鈴木クリニック project">
             <img src="../images/suzuki_mock.png" alt="鈴木クリニック ウェブサイトのモックアップ" />
+            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </a>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -167,6 +175,7 @@
               <li>CSS</li>
               <li>JavaScript</li>
               <li>WordPress</li>
+              <li>PHP</li>
             </ul>
           </div>
         </article>
@@ -212,35 +221,54 @@
 
       <div class="skill-grid">
         <article class="skill-card reveal">
-          <span class="skill-card__icon"><i class="fa-solid fa-code"></i></span>
-          <div>
-            <h3>開発</h3>
+          <div class="skill-card__header">
+            <span class="skill-card__icon"><i class="fa-solid fa-server"></i></span>
+            <h3>バックエンド</h3>
+          </div>
+          <div class="skill-card__content">
             <p>Ruby on Rails</p>
             <p>PostgreSQL</p>
-            <p>Git / GitHub</p>
-            <p>AIを活用した開発</p>
+            <p>AI / LLM連携</p>
           </div>
         </article>
 
         <article class="skill-card reveal">
-          <span class="skill-card__icon"><i class="fa-solid fa-display"></i></span>
-          <div>
+          <div class="skill-card__header">
+            <span class="skill-card__icon"><i class="fa-solid fa-display"></i></span>
             <h3>フロントエンド</h3>
+          </div>
+          <div class="skill-card__content">
             <p>HTML</p>
             <p>CSS / SCSS</p>
             <p>JavaScript</p>
-            <p>レスポンシブデザイン</p>
+            <p>Bootstrap</p>
           </div>
         </article>
 
         <article class="skill-card reveal">
-          <span class="skill-card__icon"><i class="fa-solid fa-palette"></i></span>
-          <div>
+          <div class="skill-card__header">
+            <span class="skill-card__icon"><i class="fa-solid fa-palette"></i></span>
             <h3>デザイン</h3>
+          </div>
+          <div class="skill-card__content">
             <p>Figma</p>
-            <p>Photoshop</p>
             <p>Illustrator</p>
+            <p>Photoshop</p>
             <p>UI / Webデザイン</p>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-card__header">
+            <span class="skill-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <h3>ツール &amp; <br>ワークフロー</h3>
+          </div>
+          <div class="skill-card__content">
+            <p>Git / GitHub</p>
+            <p>ターミナル</p>
+            <p>Heroku</p>
+            <p>Cloudinary</p>
+            <p>Claude Code</p>
           </div>
         </article>
       </div>
@@ -319,9 +347,9 @@
         </div>
 
         <div class="contact-links reveal">
-          <a href="https://www.linkedin.com/in/ayaka-k-581507240/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/ayaka-kikuchi/" target="_blank" rel="noreferrer">
             <span class="contact-links__icon"><i class="fa-brands fa-linkedin-in"></i></span>
-            <strong>linkedin.com/in/ayaka-k-581507240</strong>
+            <strong>linkedin.com/in/ayaka-kikuchi/</strong>
             <i class="contact-links__arrow fa-solid fa-chevron-right"></i>
           </a>
           <a href="https://github.com/ayakakikuchi-222" target="_blank" rel="noreferrer">
