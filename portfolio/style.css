@@ -372,21 +372,52 @@ html[lang="en"] .brand {
   margin-top: 28px;
 }
 
-.project-card__visual {
+.project-card {
+  /* Grid items default to min-width:auto, which would let the Swiper
+     gallery's flex-row content (slides sitting side by side) push the
+     card wider than its track. Override so the track's own width wins. */
+  min-width: 0;
+}
+
+/* Project/Work image galleries (Swiper). All 5 cards (Tossibly, Kitly, and
+   the 3 Works entries) use this — none of them link out or show a hover-dim
+   effect, since the Works cards are plain non-clickable content cards. */
+.project-gallery {
   display: block;
-  aspect-ratio: 1.52 / 1;
+  min-width: 0;
+}
+
+.project-gallery__main {
   position: relative;
+  width: 100%;
+  aspect-ratio: 1.52 / 1;
   overflow: hidden;
   background: #eef3f5;
   box-shadow: var(--shadow);
-  transition: opacity .25s ease;
 }
 
-.project-card__visual:hover {
-  opacity: .7;
+.project-card--large .project-gallery__main {
+  aspect-ratio: 1.55 / 1;
 }
 
-.project-card__visual img {
+.project-gallery__main .swiper-wrapper,
+.project-gallery__main .swiper-slide {
+  /* Flex items (Swiper's wrapper/slides) default to min-width:auto, which
+     would size each slide to fit its image at natural width. */
+  min-width: 0;
+}
+
+.project-gallery__main .swiper-slide {
+  /* This main gallery always shows one slide at a time (slidesPerView: 1),
+     so a slide's width is always exactly the container's width. Pinning it
+     with !important guards against Swiper occasionally computing and
+     inline-styling a stale/incorrect pixel width before images finish
+     settling their layout (seen with SVG placeholders in nested grid/flex
+     contexts) — there is no case where a narrower or wider slide is wanted. */
+  width: 100% !important;
+}
+
+.project-gallery__main .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -394,35 +425,41 @@ html[lang="en"] .brand {
   display: block;
 }
 
-.project-card--large .project-card__visual {
-  aspect-ratio: 1.55 / 1;
+.project-gallery__thumbs {
+  margin-top: 8px;
+  height: 38px;
 }
 
-.project-card__visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* border: 1px solid rgba(255,255,255,.48); */
-  pointer-events: none;
+.project-gallery__thumbs .swiper-wrapper {
+  /* Swiper sets this inline too, but keeping slides from stretching full-width relies on slidesPerView:'auto' + a fixed slide width below */
+  align-items: center;
 }
 
-.project-card__external-icon {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 4;
-  color: #fff;
-  font-size: .85rem;
-  pointer-events: none;
+.project-gallery__thumbs .swiper-slide {
+  width: 54px;
+  height: 38px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity .2s ease;
 }
 
-.project-card__external-icon i {
-  /* color: var(--blue-light); */
-  color: #aacbde;
+.project-gallery__thumbs .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-.project-card__external-icon.github {
-  font-size: 1.4em;
+
+.project-gallery__thumbs .swiper-slide:hover {
+  opacity: .8;
 }
+
+.project-gallery__thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--blue-deep);
+}
+
 .project-card__meta {
   margin-top: 12px;
 }
@@ -962,7 +999,13 @@ html[lang="ja"] .contact-copy h3 {
   }
 
   .project-grid--featured,
-  .project-grid--small,
+  .project-grid--small {
+    /* minmax(0, 1fr) (not a bare 1fr) keeps the track from growing to fit the
+       Swiper gallery's flex-row content (slides sitting side by side at their
+       natural image width before Swiper's JS constrains them) */
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .skill-grid,
   .contact-inner {
     grid-template-columns: 1fr;
@@ -1082,9 +1125,18 @@ html[lang="ja"] .contact-copy h3 {
     font-size: 1.05rem;
   }
 
-  .project-card__visual,
-  .project-card--large .project-card__visual {
+  .project-gallery__main,
+  .project-card--large .project-gallery__main {
     aspect-ratio: 1.25 / 1;
+  }
+
+  .project-gallery__thumbs {
+    height: 32px;
+  }
+
+  .project-gallery__thumbs .swiper-slide {
+    width: 46px;
+    height: 32px;
   }
 
   .project-visual__copy strong {

@@ -14,7 +14,9 @@
   />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="../script.js" defer></script>
 </head>
 <body>
@@ -64,8 +66,22 @@
 
       <div class="project-grid project-grid--featured">
         <article class="project-card project-card--large reveal">
-          <div class="project-card__visual project-visual project-visual--tossibly">
-            <img src="../images/tossibly-mockup.png" alt="Tossibly ウェブサイトのモックアップ" />
+          <!-- Tossiblyのギャラリー：実際の画像に差し替える場合は下記のplaceholder-02/03のパスを変更してください（メインスライドとサムネイルの2箇所に同じパスが出てきます） -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--tossibly">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/tossibly/screenshot-01.png" alt="Tossibly ウェブサイトのモックアップ" /></div>
+                <div class="swiper-slide"><img src="../images/tossibly/placeholder-02.svg" alt="プレースホルダー画像2" /></div>
+                <div class="swiper-slide"><img src="../images/tossibly/placeholder-03.svg" alt="プレースホルダー画像3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/tossibly/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/tossibly/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/tossibly/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
           </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -85,8 +101,22 @@
         </article>
 
         <article class="project-card project-card--large reveal">
-          <div class="project-card__visual project-visual project-visual--kitly">
-            <img src="../images/kitly-mockup.png" alt="Kitly ウェブサイトのモックアップ" />
+          <!-- Kitlyのギャラリー：実際の画像に差し替える場合は下記のplaceholder-02/03のパスを変更してください（メインスライドとサムネイルの2箇所に同じパスが出てきます） -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--kitly">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/kitly/screenshot-01.png" alt="Kitly ウェブサイトのモックアップ" /></div>
+                <div class="swiper-slide"><img src="../images/kitly/placeholder-02.svg" alt="プレースホルダー画像2" /></div>
+                <div class="swiper-slide"><img src="../images/kitly/placeholder-03.svg" alt="プレースホルダー画像3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/kitly/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/kitly/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/kitly/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
           </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -117,10 +147,23 @@
 
       <div class="project-grid project-grid--small">
         <article class="project-card reveal">
-          <a href="https://www.845.co.jp/" class="project-card__visual project-visual project-visual--web01" aria-label="製造業のコーポレートサイト">
-            <img src="../images/kanto845_mock.png" alt="製造業コーポレートサイトのモックアップ" />
-            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </a>
+          <!-- Work1のギャラリー：実際の画像に差し替える場合は下記のplaceholder-02/03のパスを変更してください（メインスライドとサムネイルの2箇所に同じパスが出てきます） -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--web01">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/work-01/screenshot-01.png" alt="製造業コーポレートサイトのモックアップ" /></div>
+                <div class="swiper-slide"><img src="../images/work-01/placeholder-02.svg" alt="プレースホルダー画像2" /></div>
+                <div class="swiper-slide"><img src="../images/work-01/placeholder-03.svg" alt="プレースホルダー画像3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/work-01/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/work-01/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/work-01/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>製造業 コーポレートサイト</h3>
@@ -140,8 +183,22 @@
         </article>
 
         <article class="project-card reveal">
-          <div class="project-card__visual project-visual project-visual--web03">
-            <img src="../images/inhouse-corporate-mockup.png" alt="自社コーポレートサイトのモックアップ" />
+          <!-- Work2のギャラリー：実際の画像に差し替える場合は下記のplaceholder-02/03のパスを変更してください（メインスライドとサムネイルの2箇所に同じパスが出てきます） -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--web03">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/work-02/screenshot-01.png" alt="自社コーポレートサイトのモックアップ" /></div>
+                <div class="swiper-slide"><img src="../images/work-02/placeholder-02.svg" alt="プレースホルダー画像2" /></div>
+                <div class="swiper-slide"><img src="../images/work-02/placeholder-03.svg" alt="プレースホルダー画像3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/work-02/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/work-02/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/work-02/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
           </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -162,10 +219,23 @@
         </article>
 
         <article class="project-card reveal">
-          <a href="https://www.sdu.co.jp/" class="project-card__visual project-visual project-visual--web02" aria-label="医療クリニックのWebサイト">
-            <img src="../images/suzuki_mock.png" alt="医療クリニックWebサイトのモックアップ" />
-            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </a>
+          <!-- Work3のギャラリー：実際の画像に差し替える場合は下記のplaceholder-02/03のパスを変更してください（メインスライドとサムネイルの2箇所に同じパスが出てきます） -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--web02">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/work-03/screenshot-01.png" alt="医療クリニックWebサイトのモックアップ" /></div>
+                <div class="swiper-slide"><img src="../images/work-03/placeholder-02.svg" alt="プレースホルダー画像2" /></div>
+                <div class="swiper-slide"><img src="../images/work-03/placeholder-03.svg" alt="プレースホルダー画像3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/work-03/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/work-03/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="../images/work-03/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>医療クリニック Webサイト</h3>

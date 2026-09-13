@@ -14,7 +14,9 @@
   />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -64,13 +66,27 @@
 
       <div class="project-grid project-grid--featured">
         <article class="project-card project-card--large reveal">
-          <div class="project-card__visual project-visual project-visual--tossibly">
-            <img src="images/tossibly-mockup.png" alt="Tossibly website mockup" />
+          <!-- Tossibly gallery — to add real screenshots, replace the placeholder-02/03 paths below (each appears twice: main slide + thumb slide) -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--tossibly">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/tossibly/screenshot-01.png" alt="Tossibly website mockup" /></div>
+                <div class="swiper-slide"><img src="images/tossibly/placeholder-02.svg" alt="Placeholder image 2" /></div>
+                <div class="swiper-slide"><img src="images/tossibly/placeholder-03.svg" alt="Placeholder image 3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/tossibly/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/tossibly/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="images/tossibly/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
           </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>Tossibly</h3>
-              <span>Aug 2026 · 2 weeks · Team Project @ Le Wagon Tokyo</span>
+              <span>Aug 2026 · 2 weeks · Team Project · Coding bootcamp</span>
             </div>
             <p class="project-card__desc">A web app that uses AI to analyze a photo of an unwanted item, determine whether it can be reused, and guide users toward the best next step for each item.</p>
             <p class="project-card__role">Role: Full-stack development (team project)</p>
@@ -85,13 +101,27 @@
         </article>
 
         <article class="project-card project-card--large reveal">
-          <div class="project-card__visual project-visual project-visual--kitly">
-            <img src="images/kitly-mockup.png" alt="Kitly website mockup" />
+          <!-- Kitly gallery — to add real screenshots, replace the placeholder-02/03 paths below (each appears twice: main slide + thumb slide) -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--kitly">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/kitly/screenshot-01.png" alt="Kitly website mockup" /></div>
+                <div class="swiper-slide"><img src="images/kitly/placeholder-02.svg" alt="Placeholder image 2" /></div>
+                <div class="swiper-slide"><img src="images/kitly/placeholder-03.svg" alt="Placeholder image 3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/kitly/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/kitly/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="images/kitly/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
           </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>Kitly</h3>
-              <span>Aug 2026 · 1 week · Team Project @ Le Wagon Tokyo</span>
+              <span>Aug 2026 · 1 week · Team Project · Coding bootcamp</span>
             </div>
             <p class="project-card__desc">An AI-powered UI tool that helps designers and developers quickly generate UI components based on a theme they provide.</p>
             <p class="project-card__role">Role: Full-stack development (team project)</p>
@@ -117,10 +147,23 @@
 
       <div class="project-grid project-grid--small">
         <article class="project-card reveal">
-          <a href="https://www.845.co.jp/" class="project-card__visual project-visual project-visual--web01" aria-label="Manufacturing company">
-            <img src="images/kanto845_mock.png" alt="Manufacturing company website mockup" />
-            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </a>
+          <!-- Work 1 gallery — to add real screenshots, replace the placeholder-02/03 paths below (each appears twice: main slide + thumb slide) -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--web01">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-01/screenshot-01.png" alt="Manufacturing company website mockup" /></div>
+                <div class="swiper-slide"><img src="images/work-01/placeholder-02.svg" alt="Placeholder image 2" /></div>
+                <div class="swiper-slide"><img src="images/work-01/placeholder-03.svg" alt="Placeholder image 3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-01/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-01/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-01/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>Manufacturing Company</h3>
@@ -140,8 +183,22 @@
         </article>
 
         <article class="project-card reveal">
-          <div class="project-card__visual project-visual project-visual--web03">
-            <img src="images/inhouse-corporate-mockup.png" alt="In-house corporate website mockup" />
+          <!-- Work 2 gallery — to add real screenshots, replace the placeholder-02/03 paths below (each appears twice: main slide + thumb slide) -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--web03">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-02/screenshot-01.png" alt="In-house corporate website mockup" /></div>
+                <div class="swiper-slide"><img src="images/work-02/placeholder-02.svg" alt="Placeholder image 2" /></div>
+                <div class="swiper-slide"><img src="images/work-02/placeholder-03.svg" alt="Placeholder image 3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-02/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-02/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-02/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
           </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
@@ -162,10 +219,23 @@
         </article>
 
         <article class="project-card reveal">
-          <a href="https://www.sdu.co.jp/" class="project-card__visual project-visual project-visual--web02" aria-label="Medical clinic website">
-            <img src="images/suzuki_mock.png" alt="Medical clinic website mockup" />
-            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </a>
+          <!-- Work 3 gallery — to add real screenshots, replace the placeholder-02/03 paths below (each appears twice: main slide + thumb slide) -->
+          <div class="project-gallery">
+            <div class="swiper project-gallery__main project-visual project-visual--web02">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-03/screenshot-01.png" alt="Medical clinic website mockup" /></div>
+                <div class="swiper-slide"><img src="images/work-03/placeholder-02.svg" alt="Placeholder image 2" /></div>
+                <div class="swiper-slide"><img src="images/work-03/placeholder-03.svg" alt="Placeholder image 3" /></div>
+              </div>
+            </div>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-03/screenshot-01.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-03/placeholder-02.svg" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-03/placeholder-03.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>Medical Clinic</h3>

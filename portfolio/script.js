@@ -45,3 +45,32 @@ if (header) {
   window.addEventListener('scroll', updateHeaderState, { passive: true });
   window.addEventListener('resize', updateHeaderState);
 }
+
+// Project/Work image galleries (Swiper, loaded via CDN — see index.html <head>).
+// Each ".project-gallery" card gets its own independent main+thumbs Swiper pair,
+// so interacting with one card's thumbnails never affects any other card.
+if (typeof Swiper !== 'undefined') {
+  document.querySelectorAll('.project-gallery').forEach((gallery) => {
+    const mainEl = gallery.querySelector('.project-gallery__main');
+    const thumbsEl = gallery.querySelector('.project-gallery__thumbs');
+    if (!mainEl || !thumbsEl) return;
+
+    const thumbsSwiper = new Swiper(thumbsEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    new Swiper(mainEl, {
+      rewind: true,
+      speed: 500,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      thumbs: { swiper: thumbsSwiper },
+    });
+  });
+}
