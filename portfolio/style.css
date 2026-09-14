@@ -499,6 +499,8 @@ html[lang="en"] .brand {
   font-size: .74rem;
   font-weight: 500;
   color: var(--ink-soft);
+  background-color: #e5f8ff;
+  width: fit-content;
 }
 
 .tech-tags {
@@ -526,6 +528,9 @@ html[lang="en"] .brand {
   /* max-width: 42%; */
   flex-shrink: 0;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .project-visual__copy {
