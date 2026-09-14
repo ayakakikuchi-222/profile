@@ -46,12 +46,6 @@ if (header) {
   window.addEventListener('resize', updateHeaderState);
 }
 
-// Project/Work image galleries (Swiper, loaded via CDN — see index.html <head>).
-// Each ".project-gallery" card gets its own independent main+thumbs Swiper pair
-// (its thumbnails only ever drive its own main image, never another card's),
-// but the autoplay "tick" is shared across all of them via a single interval
-// below, so every gallery advances to its next slide at the same moment
-// instead of drifting apart over time.
 if (typeof Swiper !== 'undefined') {
   const mainSwipers = [];
 
@@ -69,7 +63,7 @@ if (typeof Swiper !== 'undefined') {
 
     const mainSwiper = new Swiper(mainEl, {
       rewind: true,
-      speed: 800,
+      speed: 1000,
       thumbs: { swiper: thumbsSwiper },
     });
 
@@ -79,6 +73,6 @@ if (typeof Swiper !== 'undefined') {
   if (mainSwipers.length) {
     setInterval(() => {
       mainSwipers.forEach((swiper) => swiper.slideNext());
-    }, 4000);
+    }, 6000);
   }
 }

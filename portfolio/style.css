@@ -440,7 +440,7 @@ html[lang="en"] .brand {
   height: 38px;
   overflow: hidden;
   cursor: pointer;
-  opacity: .5;
+  opacity: .4;
   transition: opacity .2s ease;
 }
 
@@ -457,7 +457,6 @@ html[lang="en"] .brand {
 
 .project-gallery__thumbs .swiper-slide-thumb-active {
   opacity: 1;
-  box-shadow: 0 0 0 2px var(--blue-deep);
 }
 
 .project-card__meta {
