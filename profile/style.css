@@ -398,6 +398,68 @@ html[lang="en"] .brand {
   aspect-ratio: 1.55 / 1;
 }
 
+/* Project/Work image galleries (Swiper) — .project-gallery__main sits on
+   top of the existing .project-card__visual link, so aspect-ratio, overflow,
+   background, shadow and the hover-dim effect keep coming from that class. */
+.project-card {
+  /* Grid items default to min-width:auto, which would let the Swiper
+     gallery's flex-row content (slides sitting side by side) push the
+     card wider than its track. Override so the track's own width wins. */
+  min-width: 0;
+}
+
+.project-gallery {
+  display: block;
+  min-width: 0;
+}
+
+.project-gallery__main .swiper-wrapper,
+.project-gallery__main .swiper-slide {
+  min-width: 0;
+}
+
+.project-gallery__main .swiper-slide {
+  /* This main gallery always shows one slide at a time (slidesPerView: 1),
+     so a slide's width is always exactly the container's width. Pinning it
+     with !important guards against Swiper occasionally computing and
+     inline-styling a stale/incorrect pixel width before images finish
+     settling their layout. */
+  width: 100% !important;
+}
+
+.project-gallery__thumbs {
+  margin-top: 8px;
+  height: 38px;
+}
+
+.project-gallery__thumbs .swiper-wrapper {
+  align-items: center;
+}
+
+.project-gallery__thumbs .swiper-slide {
+  width: 54px;
+  height: 38px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: .4;
+  transition: opacity .2s ease;
+}
+
+.project-gallery__thumbs .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-gallery__thumbs .swiper-slide:hover {
+  opacity: .8;
+}
+
+.project-gallery__thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
 .project-card__visual::after {
   content: "";
   position: absolute;
@@ -468,7 +530,31 @@ html[lang="en"] .brand {
   border-radius: 999px;
   color: var(--ink-soft);
 }
-
+.project-link {
+  font-size: 16px;
+  display: flex;
+  gap: 16px;
+  word-break: keep-all;
+  align-items: center;
+  color: #0f61b7;
+  font-weight: 600;
+}
+.project-link a {
+  display: flex;
+  transition: all ease-in 0.3s;
+}
+.project-link a:hover {
+  opacity: 0.5;
+}
+.project-link img {
+  object-fit: contain;
+  height: 40px;
+}
+.project-link img.tap {
+  fill: rgb(15, 97, 183);
+  transform: rotate(90deg);
+  height: 1.5em;
+}
 .project-card__meta-top > span {
   font-size: .64rem;
   letter-spacing: .02em;
@@ -818,6 +904,11 @@ html[lang="ja"] .contact-copy h3 {
     height: 72px;
     padding-inline: max(18px, calc((100% - 760px) / 2));
   }
+  .site-header.is-scrolled::before {
+    background: transparent;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+  }
 
   .menu-toggle {
     display: block;
@@ -960,6 +1051,14 @@ html[lang="ja"] .contact-copy h3 {
   .experience {
     padding-bottom: 0;
   }
+  .project-link {
+    display: grid;
+    grid-template-columns: minmax(0, 250px) 1fr;
+    grid-column: 1 / -1;
+  }
+  .project-link img.tap {
+    transform: rotate(180deg);
+  }
 }
 
 /* Tablet only — between the mobile breakpoint above and the phone-specific one below */
@@ -1036,6 +1135,15 @@ html[lang="ja"] .contact-copy h3 {
   .project-card__visual,
   .project-card--large .project-card__visual {
     aspect-ratio: 1.25 / 1;
+  }
+
+  .project-gallery__thumbs {
+    height: 32px;
+  }
+
+  .project-gallery__thumbs .swiper-slide {
+    width: 46px;
+    height: 32px;
   }
 
   .project-visual__copy strong {

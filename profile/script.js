@@ -45,3 +45,38 @@ if (header) {
   window.addEventListener('scroll', updateHeaderState, { passive: true });
   window.addEventListener('resize', updateHeaderState);
 }
+
+if (typeof Swiper !== 'undefined') {
+  const mainSwipers = [];
+
+  document.querySelectorAll('.project-gallery').forEach((gallery) => {
+    const mainEl = gallery.querySelector('.project-gallery__main');
+    const thumbsEl = gallery.querySelector('.project-gallery__thumbs');
+    if (!mainEl || !thumbsEl) return;
+
+    const thumbsSwiper = new Swiper(thumbsEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    const mainSwiper = new Swiper(mainEl, {
+      // loop (not rewind): rewind's last->first transition plays in reverse
+      // (right-to-left becomes left-to-right) to signal "rewinding"; loop
+      // keeps every transition, including the wrap-around, going the same
+      // direction.
+      loop: true,
+      speed: 1000,
+      thumbs: { swiper: thumbsSwiper },
+    });
+
+    mainSwipers.push(mainSwiper);
+  });
+
+  if (mainSwipers.length) {
+    setInterval(() => {
+      mainSwipers.forEach((swiper) => swiper.slideNext());
+    }, 6000);
+  }
+}

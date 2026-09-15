@@ -14,8 +14,19 @@
   />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="script.js" defer></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCG9H7Z7XP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SCG9H7Z7XP');
+</script>
 </head>
 <body>
   <header class="site-header">
@@ -65,10 +76,25 @@
 
       <div class="project-grid project-grid--featured">
         <article class="project-card project-card--large reveal">
-          <a href="https://github.com/ayakakikuchi-222/tossibly" rel="noreferrer" class="project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
-            <img src="images/tossibly-mockup.png" alt="Tossibly website mockup" />
-            <span class="project-card__external-icon github"><i class="fa-brands fa-github"></i></span>
-          </a>
+          <div class="project-gallery">
+            <a href="https://github.com/ayakakikuchi-222/tossibly" rel="noreferrer" class="swiper project-gallery__main project-card__visual project-visual project-visual--tossibly" aria-label="Tossibly project">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/tossibly-mockup.png" alt="Tossibly website mockup" /></div>
+                <div class="swiper-slide"><img src="images/tossibly-2.png" alt="Tossibly website mockup 2" /></div>
+                <div class="swiper-slide"><img src="images/tossibly-3.png" alt="Tossibly website mockup 3" /></div>
+                <div class="swiper-slide"><img src="images/tossibly-4.png" alt="Tossibly website mockup 4" /></div>
+              </div>
+              <span class="project-card__external-icon github"><i class="fa-brands fa-github"></i></span>
+            </a>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/tossibly-mockup.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/tossibly-2.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/tossibly-3.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/tossibly-4.png" alt="" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>Tossibly</h3>
@@ -83,13 +109,25 @@
               <li>Chrome Extension</li>
             </ul>
           </div>
+          <p class="project-link">Tossibly is available from here<img src="images/tap.svg" alt="" class="tap"><a href="https://www.tossibly.tech/" target="_blank"><img src="images/tossibly-logo.png" alt="tossibly-logo"></a></p>
         </article>
 
         <article class="project-card project-card--large reveal">
-          <a href="https://github.com/ayakakikuchi-222/kitly" rel="noreferrer" class="project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
-            <img src="images/kitly-mockup.png" alt="Kitly website mockup" />
-            <span class="project-card__external-icon github"><i class="fa-brands fa-github"></i></span>
-          </a>
+          <div class="project-gallery">
+            <a href="https://github.com/ayakakikuchi-222/kitly" rel="noreferrer" class="swiper project-gallery__main project-card__visual project-visual project-visual--kitly" aria-label="Kitly project">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/kitly-mockup.png" alt="Kitly website mockup" /></div>
+                <div class="swiper-slide"><img src="images/kitly-02.png" alt="Kitly website mockup 2" style="object-fit: contain;" /></div>
+              </div>
+              <span class="project-card__external-icon github"><i class="fa-brands fa-github"></i></span>
+            </a>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/kitly-mockup.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/kitly-02.png" alt="" style="object-fit: contain;" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>Kitly</h3>
@@ -118,10 +156,23 @@
 
       <div class="project-grid project-grid--small">
         <article class="project-card reveal">
-          <a href="https://www.845.co.jp/" class="project-card__visual project-visual project-visual--web01" aria-label="Kanto Hashigo Co., Ltd. project">
-            <img src="images/kanto845_mock.png" alt="Kanto Hashigo Co., Ltd. website mockup" />
-            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </a>
+          <div class="project-gallery">
+            <a href="https://www.845.co.jp/" class="swiper project-gallery__main project-card__visual project-visual project-visual--web01" aria-label="Kanto Hashigo Co., Ltd. project">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-01/kanto845_mock.png" alt="Kanto Hashigo Co., Ltd. website mockup" /></div>
+                <div class="swiper-slide"><img src="images/work-01/work-01-2.png" alt="Kanto Hashigo Co., Ltd. website mockup 2" style="object-fit: contain;" /></div>
+                <div class="swiper-slide"><img src="images/work-01/work-01-3.png" alt="Kanto Hashigo Co., Ltd. website mockup 3" style="object-fit: contain;" /></div>
+              </div>
+              <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-01/kanto845_mock.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-01/work-01-2.png" alt="" style="object-fit: contain;" /></div>
+                <div class="swiper-slide"><img src="images/work-01/work-01-3.png" alt="" style="object-fit: contain;" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>Kanto Hashigo Co., Ltd.</h3>
@@ -139,10 +190,21 @@
         </article>
 
         <article class="project-card reveal">
-          <a href="https://www.aid-design.jp/" class="project-card__visual project-visual project-visual--web03" aria-label="ID Co., Ltd. project">
-            <img src="images/aid-mockup.png" alt="ID Co., Ltd. website mockup" />
-            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </a>
+          <div class="project-gallery">
+            <a href="https://www.aid-design.jp/" class="swiper project-gallery__main project-card__visual project-visual project-visual--web03" aria-label="ID Co., Ltd. project">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-02/aid-mockup.png" alt="ID Co., Ltd. website mockup" /></div>
+                <div class="swiper-slide"><img src="images/work-02/work-02-2.png" alt="ID Co., Ltd. website mockup 2" style="object-fit: contain;" /></div>
+              </div>
+              <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-02/aid-mockup.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-02/work-02-2.png" alt="" style="object-fit: contain;" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>AID Co., Ltd.</h3>
@@ -160,10 +222,23 @@
         </article>
 
         <article class="project-card reveal">
-          <a href="https://www.sdu.co.jp/" class="project-card__visual project-visual project-visual--web02" aria-label="Suzuki Clinic project">
-            <img src="images/suzuki_mock.png" alt="Suzuki Clinic website mockup" />
-            <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </a>
+          <div class="project-gallery">
+            <a href="https://www.sdu.co.jp/" class="swiper project-gallery__main project-card__visual project-visual project-visual--web02" aria-label="Suzuki Clinic project">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-03/suzuki_mock.png" alt="Suzuki Clinic website mockup" /></div>
+                <div class="swiper-slide"><img src="images/work-03/work-03-2.png" alt="Suzuki Clinic website mockup 2" style="object-fit: contain;" /></div>
+                <div class="swiper-slide"><img src="images/work-03/work-03-3.png" alt="Suzuki Clinic website mockup 3" style="object-fit: contain;" /></div>
+              </div>
+              <span class="project-card__external-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <div class="swiper project-gallery__thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/work-03/suzuki_mock.png" alt="" /></div>
+                <div class="swiper-slide"><img src="images/work-03/work-03-2.png" alt="" style="object-fit: contain;" /></div>
+                <div class="swiper-slide"><img src="images/work-03/work-03-3.png" alt="" style="object-fit: contain;" /></div>
+              </div>
+            </div>
+          </div>
           <div class="project-card__meta">
             <div class="project-card__meta-top">
               <h3>Suzuki Clinic</h3>

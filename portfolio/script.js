@@ -62,7 +62,11 @@ if (typeof Swiper !== 'undefined') {
     });
 
     const mainSwiper = new Swiper(mainEl, {
-      rewind: true,
+      // loop (not rewind): rewind's last->first transition plays in reverse
+      // (right-to-left becomes left-to-right) to signal "rewinding"; loop
+      // keeps every transition, including the wrap-around, going the same
+      // direction.
+      loop: true,
       speed: 1000,
       thumbs: { swiper: thumbsSwiper },
     });
